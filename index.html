@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarviX Algo — Synthetic Indices Master Class + DarviX AI</title>
+<meta name="description" content="A beginner-friendly Synthetic Indices Master Class, plus DarviX AI — intelligent trade alerts and support through Telegram.">
+
+<!-- ============================================================
+     FONTS
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     EDIT CLASS INFORMATION HERE
+     Change these values once and they will be reused across the
+     page automatically (hero chips + countdown section).
+     Format for data-date: "YYYY-MM-DDTHH:MM:SS" (24hr clock)
+     Leave data-date empty ("") if you don't have a confirmed date yet.
+     ============================================================ -->
+<div id="class-info"
+     data-date=""
+     data-time="[INSERT CLASS TIME]"
+     data-format="[INSERT CLASS FORMAT]"
+     data-whatsapp="[INSERT DARVIX WHATSAPP LINK HERE]"
+     style="display:none;"></div>
+
+<!-- ============================================================
+     1. HEADER
+     ============================================================ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <div class="brand">
+      <span class="brand-name">DarviX <span class="brand-accent">Algo</span></span>
+      <span class="brand-sub">Synthetic Indices Education + AI Trading Support</span>
+    </div>
+    <a href="#join" class="btn btn-primary btn-header js-whatsapp-link">Join the Community</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ==========================================================
+       2. HERO SECTION
+       ========================================================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="badge">Free Synthetic Indices Master Class</span>
+        <h1>Synthetic Indices, made easier to understand.</h1>
+        <p class="hero-lead">
+          A beginner-friendly learning experience designed to help you understand
+          how Synthetic Indices work, learn the fundamentals, and start practicing
+          with more structure.
+        </p>
+
+        <!-- EDIT CLASS INFORMATION HERE (chips pull from #class-info above) -->
+        <div class="chip-row" id="hero-chips">
+          <span class="chip">📅 <span class="js-class-date">[INSERT CLASS DATE]</span></span>
+          <span class="chip">🕖 <span class="js-class-time">[INSERT CLASS TIME]</span></span>
+          <span class="chip">💻 <span class="js-class-format">[INSERT CLASS FORMAT]</span></span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#join" class="btn btn-primary btn-lg js-whatsapp-link">Join the Master Class Community</a>
+          <p class="hero-note">No experience needed. Beginners welcome.</p>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="visual-stack">
+
+          <!-- Master class event card -->
+          <div class="float-card card-event">
+            <span class="card-eyebrow">Master Class</span>
+            <p class="card-title">Synthetic Indices, from zero</p>
+            <p class="card-meta js-class-date">[INSERT CLASS DATE]</p>
+          </div>
+
+          <!-- Trading chart visual -->
+          <div class="float-card card-chart">
+            <svg viewBox="0 0 220 100" class="chart-svg">
+              <polyline points="0,80 20,70 40,74 60,55 80,60 100,40 120,48 140,25 160,32 180,15 200,22 220,10"
+                        fill="none" stroke="var(--accent-blue)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="0" y1="95" x2="220" y2="95" stroke="var(--line-soft)" stroke-width="1"/>
+            </svg>
+          </div>
+
+          <!-- DarviX AI interface preview -->
+          <div class="float-card card-ai">
+            <div class="ai-dot"></div>
+            <span class="card-eyebrow ai-label">DarviX AI · Telegram</span>
+            <p class="card-title">Example alert ready</p>
+            <p class="card-meta">Tap to review the setup</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       3. INTRODUCE DARVIX AI EARLY
+       ========================================================== -->
+  <section class="section ai-teaser">
+    <div class="container ai-teaser-inner">
+      <div class="ai-teaser-copy">
+        <h2>Learn the fundamentals. Then get AI support.</h2>
+        <p>
+          The DarviX Algo Master Class helps you learn and understand Synthetic
+          Indices from the ground up. DarviX AI adds an additional layer of
+          support — personalized trade alerts and help understanding potential
+          trading opportunities, delivered through Telegram.
+        </p>
+        <a href="#darvix-ai" class="link-arrow">Explore DarviX AI</a>
+      </div>
+      <div class="ai-teaser-visual" aria-hidden="true">
+        <div class="pulse-ring"></div>
+        <div class="pulse-core">AI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       4. UPCOMING SESSION / URGENCY (no fake scarcity)
+       ========================================================== -->
+  <section class="section next-session" id="join">
+    <div class="container next-session-inner">
+      <span class="eyebrow eyebrow-on-dark">Next Session</span>
+      <h2>The next DarviX Master Class is coming up</h2>
+      <p>Join the community to receive class information and updates.</p>
+
+      <!-- Countdown only renders if a real date is set in #class-info above -->
+      <div id="countdown" class="countdown" style="display:none;">
+        <div class="countdown-unit"><span id="cd-days">00</span><small>Days</small></div>
+        <div class="countdown-unit"><span id="cd-hours">00</span><small>Hours</small></div>
+        <div class="countdown-unit"><span id="cd-mins">00</span><small>Minutes</small></div>
+        <div class="countdown-unit"><span id="cd-secs">00</span><small>Seconds</small></div>
+      </div>
+      <p id="countdown-placeholder" class="countdown-fallback">Class date to be announced in the community.</p>
+
+      <a href="#" class="btn btn-primary btn-lg js-whatsapp-link">Join the Community</a>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       5. WHAT YOU'LL LEARN
+       ========================================================== -->
+  <section class="section" id="learn">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The Master Class</span>
+        <h2>What you'll learn</h2>
+        <p>Built for people starting from zero. Clear explanations. No unnecessary jargon.</p>
+      </div>
+
+      <!-- EDIT CURRICULUM HERE -->
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>What Synthetic Indices actually are</h3>
+          <p>A simple explanation of what they are and how they behave, without the technical overload.</p>
+        </div>
+        <div class="card">
+          <h3>Understanding market behaviour</h3>
+          <p>Learn how to begin looking at price movements with more structure and less guesswork.</p>
+        </div>
+        <div class="card">
+          <h3>Approaching trade opportunities</h3>
+          <p>Understand how traders think about potential entries instead of randomly entering trades.</p>
+        </div>
+        <div class="card">
+          <h3>Risk management basics</h3>
+          <p>Learn why protecting your capital matters as much as finding an entry point.</p>
+        </div>
+        <div class="card">
+          <h3>A practical demo experience</h3>
+          <p>See concepts applied through practical examples and guided walkthroughs.</p>
+        </div>
+        <div class="card">
+          <h3>Trading discipline</h3>
+          <p>Understand why patience, structure, and decision-making matter more than speed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       6. INSIDE THE DARVIX EXPERIENCE (preview gallery + lightbox)
+       ========================================================== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">A Look Inside</span>
+        <h2>Inside the DarviX experience</h2>
+        <p>Explore some of the learning experiences, training materials, and tools inside the DarviX ecosystem.</p>
+      </div>
+
+      <!--
+        TO ADD A PREVIEW IMAGE:
+        1. Place the image file in /images/previews/
+        2. Duplicate one .preview-item block below
+        3. Update the src, alt text, and data-caption
+      -->
+      <div class="preview-grid" id="preview-gallery">
+        <button class="preview-item js-lightbox-trigger" data-caption="Master Class walkthrough">
+          <img src="images/previews/preview1.jpg" alt="Master Class walkthrough preview" loading="lazy">
+        </button>
+        <button class="preview-item js-lightbox-trigger" data-caption="Training material sample">
+          <img src="images/previews/preview2.jpg" alt="Training material sample preview" loading="lazy">
+        </button>
+        <button class="preview-item js-lightbox-trigger" data-caption="Community session preview">
+          <img src="images/previews/preview3.jpg" alt="Community session preview" loading="lazy">
+        </button>
+        <button class="preview-item js-lightbox-trigger" data-caption="DarviX AI interface preview">
+          <img src="images/previews/preview4.jpg" alt="DarviX AI interface preview" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       7. DARVIX AI FULL FEATURE SECTION
+       ========================================================== -->
+  <section class="section ai-section" id="darvix-ai">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow eyebrow-ai">The DarviX Difference</span>
+        <h2>Meet DarviX AI</h2>
+        <p>Learning is one part of the journey. DarviX AI adds an intelligent layer of support when you're exploring potential trading opportunities.</p>
+      </div>
+
+      <div class="ai-showcase">
+        <!-- Telegram-style AI interface mockup -->
+        <div class="telegram-mock" aria-hidden="true">
+          <div class="telegram-mock-header">
+            <div class="telegram-avatar">AI</div>
+            <div>
+              <p class="telegram-name">DarviX AI Bot</p>
+              <p class="telegram-status">via Telegram</p>
+            </div>
+          </div>
+          <div class="telegram-body">
+            <div class="telegram-msg">
+              <span class="alert-tag">Example AI Alert</span>
+              <p>A potential setup has formed on your watched Synthetic Index. Volatility is elevated — here's what to look at before deciding.</p>
+            </div>
+            <div class="telegram-msg telegram-msg-muted">
+              <p>Want a walkthrough of why this level matters? Ask me anything about the setup.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-feature-list">
+          <!-- EDIT DARVIX AI CONTENT HERE -->
+          <div class="ai-feature">
+            <h3>Personalized trade alerts</h3>
+            <p>Receive alerts designed around the Synthetic Indices you're actually watching.</p>
+          </div>
+          <div class="ai-feature">
+            <h3>Understand potential opportunities</h3>
+            <p>DarviX AI helps you understand what an opportunity represents, not just that one exists.</p>
+          </div>
+          <div class="ai-feature">
+            <h3>Telegram-based access</h3>
+            <p>Access DarviX AI directly through a Telegram bot — no extra app to learn.</p>
+          </div>
+          <div class="ai-feature">
+            <h3>Education meets AI support</h3>
+            <p>Learn the concepts in the Master Class, then have an intelligent tool alongside you as you practice.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="ai-disclaimer">DarviX AI provides alerts and educational support. It does not guarantee profits, winning trades, or specific outcomes. All trading involves risk.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       8. MADE FOR BEGINNERS
+       ========================================================== -->
+  <section class="section beginners">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow eyebrow-on-dark">Made for Beginners</span>
+        <h2 class="on-dark">Made for beginners</h2>
+        <p class="on-dark-muted">A clear and simple starting point for people who want to understand Synthetic Indices without feeling overwhelmed.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card card-dark">
+          <h3>Start from the beginning</h3>
+          <p>Never traded before? Start with the fundamentals, at a pace that makes sense.</p>
+        </div>
+        <div class="card card-dark">
+          <h3>Learn before taking risks</h3>
+          <p>Understand concepts and practice before making serious trading decisions.</p>
+        </div>
+        <div class="card card-dark">
+          <h3>Community support</h3>
+          <p>Receive updates, information, and learning resources inside the DarviX community.</p>
+        </div>
+        <div class="card card-dark">
+          <h3>AI trading support</h3>
+          <p>Explore additional support through DarviX AI as part of the wider DarviX ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       9. WHAT HAPPENS NEXT (journey timeline)
+       ========================================================== -->
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="section-head">
+        <h2>How your DarviX journey works</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline-step">
+          <span class="timeline-marker">1</span>
+          <div>
+            <h3>Join the community</h3>
+            <p>Join the DarviX WhatsApp community to get started.</p>
+          </div>
+        </li>
+        <li class="timeline-step">
+          <span class="timeline-marker">2</span>
+          <div>
+            <h3>Receive Master Class information</h3>
+            <p>Get updates about the upcoming class as soon as they're available.</p>
+          </div>
+        </li>
+        <li class="timeline-step">
+          <span class="timeline-marker">3</span>
+          <div>
+            <h3>Attend and learn</h3>
+            <p>Take part in the beginner-focused training session.</p>
+          </div>
+        </li>
+        <li class="timeline-step">
+          <span class="timeline-marker">4</span>
+          <div>
+            <h3>Practice the concepts</h3>
+            <p>Apply what you learn through guided practice.</p>
+          </div>
+        </li>
+        <li class="timeline-step">
+          <span class="timeline-marker">5</span>
+          <div>
+            <h3>Explore DarviX AI</h3>
+            <p>Access additional AI-powered trading support through Telegram.</p>
+          </div>
+        </li>
+        <li class="timeline-step">
+          <span class="timeline-marker">6</span>
+          <div>
+            <h3>Continue learning</h3>
+            <p>Stay connected to the wider DarviX ecosystem as you grow.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       10. TESTIMONIAL SCREENSHOT CAROUSEL
+       ========================================================== -->
+  <section class="section section-alt" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What People Say</span>
+        <h2>From the DarviX community</h2>
+      </div>
+
+      <!--
+        TO ADD A NEW TESTIMONIAL, PLACE THE IMAGE IN /images/testimonials/
+        AND ADD A NEW TESTIMONIAL ITEM HERE (duplicate a .testimonial-slide block).
+        Example path: /images/testimonials/testimonial1.jpg
+      -->
+      <div class="carousel" id="testimonial-carousel">
+        <div class="carousel-track" id="testimonial-track">
+          <div class="testimonial-slide">
+            <img src="images/testimonials/testimonial1.jpg" alt="Community testimonial screenshot" loading="lazy">
+          </div>
+          <div class="testimonial-slide">
+            <img src="images/testimonials/testimonial2.jpg" alt="Community testimonial screenshot" loading="lazy">
+          </div>
+          <div class="testimonial-slide">
+            <img src="images/testimonials/testimonial3.jpg" alt="Community testimonial screenshot" loading="lazy">
+          </div>
+          <div class="testimonial-slide">
+            <img src="images/testimonials/testimonial4.jpg" alt="Community testimonial screenshot" loading="lazy">
+          </div>
+          <div class="testimonial-slide">
+            <img src="images/testimonials/testimonial5.jpg" alt="Community testimonial screenshot" loading="lazy">
+          </div>
+        </div>
+        <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous testimonial">‹</button>
+        <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next testimonial">›</button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       11. TRAINING / EVENT FLYER GALLERY
+       ========================================================== -->
+  <section class="section" id="training">
+    <div class="container">
+      <div class="section-head">
+        <h2>Upcoming DarviX training</h2>
+        <p>Explore upcoming learning sessions and DarviX educational experiences.</p>
+      </div>
+
+      <!--
+        TO ADD A NEW FLYER:
+        1. Place the image in /images/flyers/
+        2. Duplicate one .flyer-item block below
+        3. Update the src and alt text
+      -->
+      <div class="flyer-grid" id="flyer-gallery">
+        <button class="flyer-item js-lightbox-trigger" data-caption="Upcoming session flyer">
+          <img src="images/flyers/flyer1.jpg" alt="Upcoming DarviX training flyer" loading="lazy">
+        </button>
+        <button class="flyer-item js-lightbox-trigger" data-caption="Upcoming session flyer">
+          <img src="images/flyers/flyer2.jpg" alt="Upcoming DarviX training flyer" loading="lazy">
+        </button>
+        <button class="flyer-item js-lightbox-trigger" data-caption="Upcoming session flyer">
+          <img src="images/flyers/flyer3.jpg" alt="Upcoming DarviX training flyer" loading="lazy">
+        </button>
+        <button class="flyer-item js-lightbox-trigger" data-caption="Upcoming session flyer">
+          <img src="images/flyers/flyer4.jpg" alt="Upcoming DarviX training flyer" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       LIGHTBOX (shared by preview gallery + flyer gallery)
+       ========================================================== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+    <img src="" alt="" id="lightbox-img">
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+  <!-- ==========================================================
+       12. FAQ
+       ========================================================== -->
+  <section class="section section-alt" id="faq">
+    <div class="container container-narrow">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Common questions</h2>
+        <p>Everything you need to know before joining the DarviX community.</p>
+      </div>
+
+      <div class="accordion" id="faq-accordion">
+        <div class="accordion-item">
+          <button class="accordion-trigger">Is the Master Class really beginner-friendly?</button>
+          <div class="accordion-panel">
+            <p>Yes. The class is built for people with no prior trading experience. Concepts are explained step by step, without assuming any background knowledge.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">I have never traded before. Is this for me?</button>
+          <div class="accordion-panel">
+            <p>Yes. Most people joining are starting from zero. The class is designed to meet you where you are.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">How do I join?</button>
+          <div class="accordion-panel">
+            <p>Join the DarviX WhatsApp community using the button on this page. You'll receive class information and updates there.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Do I need to deposit money?</button>
+          <div class="accordion-panel">
+            <p>No deposit is required to join the community or attend the Master Class. It's an educational experience.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">What is DarviX AI?</button>
+          <div class="accordion-panel">
+            <p>DarviX AI is an AI-powered trading companion, accessed through Telegram, that sends personalized trade alerts and helps you understand potential trading opportunities.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">How does DarviX AI work?</button>
+          <div class="accordion-panel">
+            <p>DarviX AI monitors Synthetic Indices and sends alerts through a Telegram bot, along with context to help you understand what a potential setup means.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Does DarviX AI guarantee profitable trades?</button>
+          <div class="accordion-panel">
+            <p>No. DarviX AI does not guarantee profits, winning trades, or any specific outcome. All trading carries risk, and you are responsible for your own decisions.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Where do I access DarviX AI?</button>
+          <div class="accordion-panel">
+            <p>DarviX AI is accessed through a dedicated Telegram bot. Access details are shared inside the DarviX WhatsApp community.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Is this financial advice?</button>
+          <div class="accordion-panel">
+            <p>No. DarviX Algo provides education and informational support only. Nothing on this page or inside the community should be treated as financial advice.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Will there be future training sessions?</button>
+          <div class="accordion-panel">
+            <p>Yes. Future sessions are shared inside the community as they're scheduled. Join to stay updated.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       13. FINAL CTA
+       ========================================================== -->
+  <section class="section final-cta">
+    <div class="container final-cta-inner">
+      <span class="eyebrow eyebrow-on-dark">Ready to Begin?</span>
+      <h2 class="on-dark">Your journey into Synthetic Indices starts here.</h2>
+      <p class="on-dark-muted">Join the DarviX Algo community, get information about the Master Class, and discover how education and AI support come together inside the DarviX ecosystem.</p>
+      <a href="#" class="btn btn-primary btn-lg js-whatsapp-link">Join the DarviX Community</a>
+      <p class="final-cta-note">Beginner-friendly. Educational. Built for structured learning.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==========================================================
+     14. FLOATING WHATSAPP CTA
+     ========================================================== -->
+<a href="#" class="floating-cta js-whatsapp-link" id="floating-whatsapp" aria-label="Join the DarviX WhatsApp community">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12.05 2C6.508 2 2 6.477 2 11.994c0 2.09.61 4.031 1.663 5.665L2 22l4.463-1.633a10.06 10.06 0 0 0 5.587 1.678h.005c5.542 0 10.05-4.477 10.05-9.994C22.105 6.532 17.6 2.055 12.05 2zm0 18.166h-.004a8.36 8.36 0 0 1-4.264-1.166l-.306-.181-3.176 1.162.847-3.09-.199-.317a8.288 8.288 0 0 1-1.271-4.42c0-4.582 3.746-8.31 8.377-8.31 2.238 0 4.34.87 5.923 2.449a8.253 8.253 0 0 1 2.451 5.868c-.002 4.582-3.748 8.005-8.378 8.005z"/>
+  </svg>
+</a>
+
+<!-- ==========================================================
+     15. FOOTER
+     ========================================================== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-brand">DarviX Algo</p>
+      <p class="footer-tagline">Learn with structure. Trade with better support.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#learn">Synthetic Indices Master Class</a></li>
+      <li><a href="#darvix-ai">DarviX AI</a></li>
+      <li><a href="#darvix-ai">Telegram AI Trading Support</a></li>
+      <li><a href="#join" class="js-whatsapp-link">WhatsApp Community</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <p class="disclaimer">
+      Trading Synthetic Indices involves risk, and you can lose money. Educational content provided by DarviX Algo
+      does not guarantee profits or any specific results. DarviX AI provides alerts and informational support and
+      does not guarantee successful trades or outcomes. Nothing on this page constitutes financial advice. You are
+      solely responsible for your own trading decisions and risk management.
+    </p>
+    <p class="footer-copy">© <span id="footer-year"></span> DarviX Algo. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
